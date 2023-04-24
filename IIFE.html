@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <body>
+ <script>
+ //odd number:  
+(function odd(n)
+{
+    for(let i=1;i<n;i=i+2)
+    
+    console.log(i);
+    
+})(20);
+//title case:
+(function (a)
+{
+    console.log(a.toUpperCase());
+    
+})("am fine");
+//add number:
+(function add([a,b,c,d,e]) {
+console.log(a+b+c+d+e);
+})([5,10,15,20,30]);
+//prime number:
+(function prime(a,b){
+for ( i = a; i <= b; i++) {
+     flag = 0;
+    for ( j = 2; j < i; j++) {
+        if (i % j == 0) {
+            flag = 1;
+            break;
+        }
+    }
+    if (i > 1 && flag == 0) {
+        console.log(i);
+    }
+}
+})(2,10);
+//palindrome:
+function isPalindrome(num) {
+    var str = num.toString();
+    var rev=str.split("").reverse().join("");
+  
+    if(rev == str){
+        return true;
+    }
+    return false;
+                 
+}
+  
+var str1 = 1234321;
+
+console.log(isPalindrome(str1));
+
+//remove duplicate file:
+var names = ['pavithran', 'sathya', 'ganesh', 'vimal', 'vinoth','sathya', 'ganesh', 'Nancy'];
+
+var uniq = names
+  .map((name) => {
+    return {count: 1, name: name};
+  })
+  .reduce((a, b) => {
+    a[b.name] = (a[b.name] || 0) + b.count;
+    return a;
+  }, {});
+
+var sorted = Object.keys(uniq).sort((a, b) => uniq[a] < uniq[b]);
+
+console.log(sorted);
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
